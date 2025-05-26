@@ -4,8 +4,8 @@ import Link from "next/link";
 import { Bounded } from "../Bounded";
 import { GridItem } from "../GridItem/GridItem";
 
-export async function Header() {
-  const pageContentValues = Object.values(await pageContent);
+export function Header() {
+  const pageContentValues = Object.values(pageContent);
   const navigation = [
     { label: "Home", href: "/" },
     ...pageContentValues.map((page) => ({

@@ -31,7 +31,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   return <PageTemplate page={page} />;
 }
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   const keys = pageContent ? Object.keys(pageContent) : [];
   return keys.map((uid) => ({ uid }));
 }
