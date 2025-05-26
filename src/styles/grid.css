@@ -1,0 +1,46 @@
+.grid-wrapper {
+  --grid-outer-gap: 4vw;
+  --grid-space: 1fr;
+
+  --grid-full: 100vw;
+  --grid-inner: calc(var(--grid-full) - var(--grid-outer-gap) * 2);
+  --grid-col-width: calc(var(--grid-inner) / 8);
+
+  --grid-1-col-width: var(--grid-col-width);
+  --grid-2-col-width: calc(var(--grid-col-width) * 2);
+  --grid-3-col-width: calc(var(--grid-col-width) * 3);
+  --grid-4-col-width: calc(var(--grid-col-width) * 4);
+  --grid-5-col-width: calc(var(--grid-col-width) * 5);
+  --grid-6-col-width: calc(var(--grid-col-width) * 6);
+  --grid-7-col-width: calc(var(--grid-col-width) * 7);
+  --grid-8-col-width: calc(var(--grid-col-width) * 8);
+
+  --grid-right-inset: calc(var(--grid-outer-gap) - 1.5rem);
+
+  display: grid;
+  grid-template-columns:
+    [start-edge]
+    var(--grid-outer-gap)
+    [start-inner]
+    repeat(4, var(--grid-space))
+    [center]
+    repeat(4, var(--grid-space))
+    [end-inner]
+    var(--grid-outer-gap)
+    [end-edge];
+  width: 100%;
+
+  @screen md {
+    --grid-outer-gap: 4vw;
+  }
+
+  @screen lg {
+    --grid-right-inset: calc(
+      var(--grid-outer-gap) + var(--grid-col-width) - 1.5rem
+    );
+  }
+}
+
+.subgrid-item {
+  @apply grid-cols-subgrid grid;
+}
