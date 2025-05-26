@@ -1,5 +1,5 @@
 import { GridItem } from "@/components/GridItem/GridItem";
-import { PageContent } from "@/pages/PageTemplate/content";
+import { PageContent } from "@/template/PageTemplate/content";
 
 export type PageProps = {
   page: PageContent;
@@ -13,7 +13,7 @@ export function PageTemplate({ page }: PageProps) {
         columnEnd={["col-end-[end-inner]"]}
       >
         <h1 className="headline-display-xl font-bold mb-8">{page.title}</h1>
-        <p className="text-paragraph">{page.content}</p>
+        <div className="text-paragraph">{page.content}</div>
       </GridItem>
     </div>
   );

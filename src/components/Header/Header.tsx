@@ -1,5 +1,5 @@
-import { pageContent } from "@/pages/PageTemplate/content";
 import { LogoMark } from "@/svg";
+import { pageContent } from "@/template/PageTemplate/content";
 import Link from "next/link";
 import { Bounded } from "../Bounded";
 import { GridItem } from "../GridItem/GridItem";

@@ -1,5 +1,5 @@
-import { PageTemplate } from "@/pages/PageTemplate";
-import { pageContent } from "@/pages/PageTemplate/content";
+import { PageTemplate } from "@/template/PageTemplate";
+import { pageContent } from "@/template/PageTemplate/content";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -8,9 +8,9 @@ type Params = { uid: string };
 export async function generateMetadata({
   params,
 }: {
-  params: Params;
-}): Promise<Metadata> {
-  const { uid } = params;
+  params: Promise<Params>;
+}): Promise<Metadata | null> {
+  const { uid } = await params;
 
   const metadata = pageContent[uid].metadata;
   if (!metadata) {
@@ -20,8 +20,8 @@ export async function generateMetadata({
   return metadata;
 }
 
-export default function Page({ params }: { params: Params }) {
-  const { uid } = params;
+export default async function Page({ params }: { params: Promise<Params> }) {
+  const { uid } = await params;
 
   const page = pageContent[uid];
   if (!page) {

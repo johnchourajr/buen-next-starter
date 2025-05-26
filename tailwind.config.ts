@@ -17,8 +17,7 @@ function typePlugin({ addUtilities }: PluginAPI) {
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx,css}",
-    "./src/page/**/*.{js,ts,jsx,tsx,mdx,css}",
+    "./src/template/**/*.{js,ts,jsx,tsx,mdx,css}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx,css}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx,css}",
     "./src/slices/**/*.{js,ts,jsx,tsx,mdx,css}",

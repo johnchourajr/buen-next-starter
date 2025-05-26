@@ -1,5 +1,5 @@
 import { GridItem } from "@/components/GridItem/GridItem";
-import { HomepageContent } from "@/pages/Homepage/content";
+import { HomepageContent } from "@/template/Homepage/content";
 
 export type HomepageProps = {
   homepage: HomepageContent;
