@@ -32,14 +32,19 @@ export function Homepage({ homepage }: HomepageProps) {
         >
           <h2 className="headline-display-md mb-12">Features</h2>
           <div className="w-full flex flex-col divide-y divide-black border-y border-black">
-            {homepage.features.map((feature) => (
-              <div className="py-10 flex flex-col gap-3" key={feature.title}>
-                <h3 className="headline-display-sm font-semibold">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </div>
-            ))}
+            {Array.isArray(homepage.features)
+              ? homepage.features.map((feature) => (
+                  <div
+                    className="py-10 flex flex-col gap-3"
+                    key={feature.title}
+                  >
+                    <h3 className="headline-display-sm font-semibold">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-600">{feature.description}</p>
+                  </div>
+                ))
+              : null}
           </div>
         </GridItem>
       </GridItem>

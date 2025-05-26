@@ -8,10 +8,12 @@ export function Header() {
   const pageContentValues = Object.values(pageContent);
   const navigation = [
     { label: "Home", href: "/" },
-    ...pageContentValues.map((page) => ({
-      label: page.title,
-      href: `/${page.slug}`,
-    })),
+    ...(Array.isArray(pageContentValues)
+      ? pageContentValues.map((page) => ({
+          label: page.title,
+          href: `/${page.slug}`,
+        }))
+      : []),
   ];
 
   return (
@@ -30,14 +32,16 @@ export function Header() {
         </Link>
         <nav>
           <ul className="flex flex-wrap gap-6 md:gap-10">
-            {navigation.map((item) => (
-              <li
-                key={item.label}
-                className="text-body font-semibold text-black"
-              >
-                <Link href={item.href}>{item.label}</Link>
-              </li>
-            ))}
+            {Array.isArray(navigation)
+              ? navigation.map((item) => (
+                  <li
+                    key={item.label}
+                    className="text-body font-semibold text-black"
+                  >
+                    <Link href={item.href}>{item.label}</Link>
+                  </li>
+                ))
+              : null}
           </ul>
         </nav>
       </GridItem>
