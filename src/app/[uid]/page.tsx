@@ -1,5 +1,5 @@
 import { PageTemplate } from "@/template/PageTemplate";
-import { pageContent } from "@/template/PageTemplate/content";
+import { pages } from "@/template/PageTemplate/content";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -12,7 +12,7 @@ export async function generateMetadata({
 }): Promise<Metadata | null> {
   const { uid } = await params;
 
-  const page = pageContent?.[uid];
+  const page = pages.find((page) => page.uid === uid);
   if (!page || !page.metadata) {
     notFound();
   }
@@ -23,7 +23,7 @@ export async function generateMetadata({
 export default async function Page({ params }: { params: Promise<Params> }) {
   const { uid } = await params;
 
-  const page = pageContent?.[uid];
+  const page = pages.find((page) => page.uid === uid);
   if (!page) {
     notFound();
   }
@@ -32,6 +32,5 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 }
 
 export function generateStaticParams() {
-  const keys = pageContent ? Object.keys(pageContent) : [];
-  return Array.isArray(keys) ? keys.map((uid) => ({ uid })) : [];
+  return pages.map((page) => ({ uid: page.uid }));
 }

@@ -1,18 +1,15 @@
 import { Metadata } from "next";
 
 export type PageContent = {
-  slug: string;
+  uid: string;
   title: string;
-  content: React.ReactNode;
+  content: string;
   metadata: Metadata;
 };
 
-export const pageContent: Record<
-  string,
-  { slug: string; title: string; content: React.ReactNode; metadata: Metadata }
-> = Object.freeze({
-  work: {
-    slug: "work",
+export const pages: PageContent[] = [
+  {
+    uid: "work",
     title: "Work",
     content: "Doing work is what we do",
     metadata: {
@@ -20,8 +17,8 @@ export const pageContent: Record<
       description: "Doing work is what we do",
     },
   },
-  journal: {
-    slug: "journal",
+  {
+    uid: "journal",
     title: "Journal",
     content: "Writing about work is what we do",
     metadata: {
@@ -29,8 +26,8 @@ export const pageContent: Record<
       description: "Writing about work is what we do",
     },
   },
-  contact: {
-    slug: "contact",
+  {
+    uid: "contact",
     title: "Contact",
     content: "Contacting us is what you do",
     metadata: {
@@ -38,4 +35,4 @@ export const pageContent: Record<
       description: "Contacting us is what you do",
     },
   },
-});
+];

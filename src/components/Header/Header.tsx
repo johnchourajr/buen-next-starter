@@ -1,19 +1,16 @@
 import { LogoMark } from "@/svg";
-import { pageContent } from "@/template/PageTemplate/content";
+import { pages } from "@/template/PageTemplate/content";
 import Link from "next/link";
 import { Bounded } from "../Bounded";
 import { GridItem } from "../GridItem/GridItem";
 
 export function Header() {
-  const pageContentValues = Object.values(pageContent);
   const navigation = [
     { label: "Home", href: "/" },
-    ...(Array.isArray(pageContentValues)
-      ? pageContentValues.map((page) => ({
-          label: page.title,
-          href: `/${page.slug}`,
-        }))
-      : []),
+    ...pages.map((page) => ({
+      label: page.title,
+      href: `/${page.uid}`,
+    })),
   ];
 
   return (
