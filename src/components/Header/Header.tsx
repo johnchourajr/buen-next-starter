@@ -5,9 +5,10 @@ import { Bounded } from "../Bounded";
 import { GridItem } from "../GridItem/GridItem";
 
 export function Header() {
+  const pageContentValues = pageContent ? Object.values(pageContent) : [];
   const navigation = [
     { label: "Home", href: "/" },
-    ...Object.values(pageContent).map((page) => ({
+    ...pageContentValues.map((page) => ({
       label: page.title,
       href: `/${page.slug}`,
     })),

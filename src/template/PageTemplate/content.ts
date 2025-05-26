@@ -10,7 +10,7 @@ export type PageContent = {
 export const pageContent: Record<
   string,
   { slug: string; title: string; content: React.ReactNode; metadata: Metadata }
-> = {
+> = Object.freeze({
   work: {
     slug: "work",
     title: "Work",
@@ -38,4 +38,4 @@ export const pageContent: Record<
       description: "Contacting us is what you do",
     },
   },
-};
+});
