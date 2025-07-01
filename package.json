@@ -13,29 +13,29 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@muybuen/type": "^1.1.6",
-    "@netlify/plugin-nextjs": "^5.8.1",
+    "@muybuen/type": "^1.1.7",
+    "@netlify/plugin-nextjs": "^5.11.4",
     "clsx": "^2.1.1",
-    "motion": "^11.13.1",
-    "next": "^15.3.2",
+    "motion": "^11.18.2",
+    "next": "^15.3.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@types/node": "^22.8.6",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "autoprefixer": "^10.4.20",
-    "concurrently": "^9.0.1",
-    "eslint": "^9.13.0",
-    "eslint-config-next": "^15.0.2",
-    "postcss": "^8.4.47",
-    "postcss-import": "^16.1.0",
-    "postcss-nesting": "^13.0.1",
-    "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.8",
-    "tailwindcss": "^3.4.14",
-    "typescript": "^5.6.3"
+    "@types/node": "^22.15.35",
+    "@types/react": "^18.3.23",
+    "@types/react-dom": "^18.3.7",
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.2.0",
+    "eslint": "^9.30.0",
+    "eslint-config-next": "^15.3.4",
+    "postcss": "^8.5.6",
+    "postcss-import": "^16.1.1",
+    "postcss-nesting": "^13.0.2",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.13",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3"
   }
 }
