@@ -1,5 +1,2 @@
+@import "tailwindcss";
 @import "../styles/grid.css";
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

@@ -1,11 +1,12 @@
 import { buenTypeTailwind } from "@muybuen/type";
-import { PluginAPI } from "tailwindcss/types/config";
+import type { Config } from "tailwindcss";
+import type { PluginAPI } from "tailwindcss/plugin";
 
 import { customHeadlines, customTexts } from "./src/config/typography";
 
-function typePlugin({ addUtilities }: PluginAPI) {
+function typePlugin(api: PluginAPI) {
   buenTypeTailwind(
-    { addUtilities },
+    api,
     {
       customHeadlines,
       customTexts,
@@ -14,8 +15,7 @@ function typePlugin({ addUtilities }: PluginAPI) {
   );
 }
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+const config: Config = {
   content: [
     "./src/template/**/*.{js,ts,jsx,tsx,mdx,css}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx,css}",
@@ -30,5 +30,7 @@ module.exports = {
     },
     extend: {},
   },
-  plugins: [require("@tailwindcss/aspect-ratio"), typePlugin],
+  plugins: [typePlugin],
 };
+
+export default config;
