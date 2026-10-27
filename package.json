@@ -1,5 +1,5 @@
 {
-  "name": "buen-starter",
+  "name": "bueno-next-starter",
   "version": "0.0.0",
   "private": true,
   "license": "Apache-2.0",
@@ -13,7 +13,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@muybuen/type": "^1.1.6",
+    "@bueno-dev/type": "npm:@muybuen/type@^1.1.6",
     "@netlify/plugin-nextjs": "^5.8.1",
     "clsx": "^2.1.1",
     "motion": "^12.23.26",
