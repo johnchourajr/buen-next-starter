@@ -1,4 +1,4 @@
-# Buen Starter
+# Bueno Next Starter
 
 A Next.js starter template built with TypeScript, Tailwind CSS, and Motion.
 

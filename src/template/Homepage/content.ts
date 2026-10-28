@@ -12,13 +12,13 @@ export type HomepageContent = {
 
 export const homepage = {
   metadata: {
-    title: "Buen Next Starter",
+    title: "Bueno Next Starter",
     description:
-      "Make buen websites with Next.js starter. It's all things that are buen and keeps it simple.",
+      "Make bueno websites with Next.js starter. It's all things that are bueno and keeps it simple.",
   },
-  title: "Buen Next Starter",
+  title: "Bueno Next Starter",
   description:
-    "Make buen websites with Next.js starter. It's all things that are buen and keeps it simple.",
+    "Make bueno websites with Next.js starter. It's all things that are bueno and keeps it simple.",
   features: [
     {
       title: "Next.js",
@@ -30,15 +30,15 @@ export const homepage = {
     },
     {
       title: "Tailwind CSS",
-      description: "All that Tailwind styled system buen-ness",
+      description: "All that Tailwind styled system bueno-ness",
     },
     {
       title: "Typography System",
-      description: "A buen typography system that can be easily customized",
+      description: "A bueno typography system that can be easily customized",
     },
     {
       title: "Grid System",
-      description: "A strong grid system is key for any buen website",
+      description: "A strong grid system is key for any bueno website",
     },
     {
       title: "Scaffold Components",

@@ -13,7 +13,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@bueno-dev/type": "npm:@muybuen/type@^1.1.6",
+    "@bueno-dev/type": "^1.1.9",
     "@netlify/plugin-nextjs": "^5.8.1",
     "clsx": "^2.1.1",
     "motion": "^12.23.26",
