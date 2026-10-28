@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@bueno-dev/type':
-        specifier: npm:@muybuen/type@^1.1.6
-        version: '@muybuen/type@1.1.8'
+        specifier: ^1.1.9
+        version: 1.1.9
       '@netlify/plugin-nextjs':
         specifier: ^5.8.1
         version: 5.16.4
@@ -148,6 +148,10 @@ packages:
   '@babel/types@7.29.11':
     resolution: {integrity: sha512-WCsemW40Cpc6gouC1SrY6PBaZ+oLRlEVY9XBvZBI7il/HyUrb2nJ505wE1MHEFyDZNnrWDEuy4jL50WVHfTTSQ==}
     engines: {node: '>=6.9.0'}
+
+  '@bueno-dev/type@1.1.9':
+    resolution: {integrity: sha512-aLyKsG0kZaqkK7xhXilztLXbFZ5i60ir8I1+Q70Vng7hQhOJPvkAARPJi879IY+mGbpxxL8xTXVJJvSC5Iji4A==}
+    engines: {node: '>=18.0.0'}
 
   '@csstools/selector-resolve-nested@3.1.0':
     resolution: {integrity: sha512-mf1LEW0tJLKfWyvn5KdDrhpxHyuxpbNwTIwOYLIvsTffeyOf85j5oIzfG0yosxDgx/sswlqBnESYUcQH0vgZ0g==}
@@ -414,10 +418,6 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
-
-  '@muybuen/type@1.1.8':
-    resolution: {integrity: sha512-o+dQuz2VmYgi99BsHmsSB7j/Ay7Pj+IrTrMoT9CAUSdKXkzndb4UfB0SixI2Xx/7W8tscGD1+dnR8aJgvqV1/g==}
-    engines: {node: '>=18.0.0'}
 
   '@napi-rs/wasm-runtime@1.2.6':
     resolution: {integrity: sha512-mRyDmEw9/fCDXCGfL1sbgIw/GUK0PVxRW4YwgPN61F3LQ+fSyoBFarJVzgGyhF6kRzEQZ0FejDqm4WLXSeqQmw==}
@@ -2328,6 +2328,8 @@ snapshots:
       '@babel/helper-string-parser': 7.29.11
       '@babel/helper-validator-identifier': 7.29.7
 
+  '@bueno-dev/type@1.1.9': {}
+
   '@csstools/selector-resolve-nested@3.1.0(postcss-selector-parser@7.1.7)':
     dependencies:
       postcss-selector-parser: 7.1.7
@@ -2549,8 +2551,6 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
-
-  '@muybuen/type@1.1.8': {}
 
   '@napi-rs/wasm-runtime@1.2.6(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)':
     dependencies:
