@@ -1,4 +1,4 @@
-import { buenTypeTailwind } from "@muybuen/type";
+import { buenTypeTailwind } from "@bueno-dev/type";
 import { PluginAPI } from "tailwindcss/types/config";
 
 import { customHeadlines, customTexts } from "./src/config/typography";
