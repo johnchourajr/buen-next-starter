@@ -13,7 +13,7 @@ export const pages: PageContent[] = [
     title: "Work",
     content: "Doing work is what we do",
     metadata: {
-      title: "Work | Buen Next Starter",
+      title: "Work | Bueno Next Starter",
       description: "Doing work is what we do",
     },
   },
@@ -22,7 +22,7 @@ export const pages: PageContent[] = [
     title: "Journal",
     content: "Writing about work is what we do",
     metadata: {
-      title: "Journal | Buen Next Starter",
+      title: "Journal | Bueno Next Starter",
       description: "Writing about work is what we do",
     },
   },
@@ -31,7 +31,7 @@ export const pages: PageContent[] = [
     title: "Contact",
     content: "Contacting us is what you do",
     metadata: {
-      title: "Contact | Buen Next Starter",
+      title: "Contact | Bueno Next Starter",
       description: "Contacting us is what you do",
     },
   },
